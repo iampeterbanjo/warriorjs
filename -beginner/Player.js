@@ -3,7 +3,7 @@ var _underAttack = false
 
 class Player {
   playTurn(warrior) {
-    // if under attack find the enemy and kill
+    // if under attack don't rest, find the enemy and kill
     _underAttack = _previousHealth > warrior.health();
 
     if(!warrior.feel().isEmpty()) {
