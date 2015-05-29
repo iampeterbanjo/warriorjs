@@ -20,26 +20,26 @@ Tip: You can walk backward by passing `'backward'` as an argument to `walk()`. S
 Warrior Abilities:
 
   Actions:
-  
+
     warrior.rescue()
       Rescue a captive from his chains (earning 20 points) in given direction (forward by default).
-  
+
     warrior.rest()
       Gain 10% of max health back, but do nothing more.
-  
+
     warrior.attack()
       Attacks a unit in given direction (forward by default).
-  
+
     warrior.walk()
       Move in the given direction (forward by default).
-  
+
   Senses:
-  
+
     warrior.health()
       Returns an integer representing your health.
-  
+
     warrior.feel()
       Returns a Space for the given direction (forward by default).
-  
+
 
 When you're done editing Player.js, run the warriorjs command again.
