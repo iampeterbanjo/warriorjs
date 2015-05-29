@@ -1,26 +1,30 @@
+/**********
+
+A warrior can
+- die -> health === 0
+- rescue captives -> warrior.rescue()
+- walk -> warrior.walk()
+- attack -> warrior.attack()
+- sense a wall -> warrior.feel().isWall()
+- sense an empty space -> warrior.feel().isEmpty()
+Priorities
+- Survive
+-- rest when not under attack to full health
+-- attack foes
+-- retreat from attack when health is low
+- Explore
+-- Walk backwards first
+-- Change direction at a wall
+-- Remember the wall behind
+- Humane
+-- Rescue captives
+
+**********/
+
+
 var _underAttack = false
     , _previousHealth
     , direction = 'backward';
-
-// A warrior can
-// - die -> health === 0
-// - rescue captives -> warrior.rescue()
-// - walk -> warrior.walk()
-// - attack -> warrior.attack()
-// - sense a wall -> warrior.feel().isWall()
-// - sense an empty space -> warrior.feel().isEmpty()
-
-// Priorities
-// - Survive
-// -- rest when not under attack to full health
-// -- attack foes
-// -- retreat from attack when health is low
-// - Explore
-// -- Walk backwards first
-// -- Change direction at a wall
-// -- Remember the wall behind
-// - Humane
-// -- Rescue captives
 
 function exploreMind(warrior, health) {
   if(health < 10) {
